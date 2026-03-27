@@ -1,0 +1,15 @@
+<div id="infobar" class="centered-text">
+  {% if page.extra.gh_repo %}
+  <a
+    href="https://github.com/{{ page.extra.gh_repo }}"
+    target="_blank"
+    rel="noopener"
+  >
+    GitHub
+  </a>
+  {% endif %} {% if page.extra.links %} {% for title, link in page.extra.links
+  %} ∙
+  <a href="{{ link }}" target="_blank" rel="noopener"> {{ title }} </a>
+  {% endfor %} {% endif %} {% if page.extra.license %} ∙ {{ page.extra.license
+  }} {% endif %} {% if page.extra.is_archived %} ∙ Archived {% endif %}
+</div>

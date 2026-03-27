@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+    {% if section.extra.section_path -%}
+        {% set section = get_section(path=section.extra.section_path) %}
+    {% endif -%}
+
+    {{ macros_page_header::page_header(title=section.title) }}
+
+    <main>
+        {% if section.content -%}
+            <div id="page-content">{{ section.content | safe }}</div>
+        {% endif %}
+
+        <br>
+        {% for page in section.pages %}
+        {% set full_page = get_page(path=page.relative_path) %}
+        <article>
+            <h2 id="{{ page.title | slugify }}">
+                {% if page.extra.gh_repo %}
+                <a
+                    href="https://github.com/{{ page.extra.gh_repo }}"
+                    target="_blank"
+                    rel="noopener"
+                >
+                {% endif %}
+                {{ page.title }}{% if page.extra.gh_repo %}</a>{% endif %}
+            </h2>
+            <ul class="meta">
+                <li>
+                    <time datetime="{{ page.date }}">{{ page.date | date(format="%B %Y") }}</time>
+                    {% if page.extra.gh_repo %}
+                    on
+                    <a
+                        href="https://github.com/{{ page.extra.gh_repo }}/pulls?q=sort%3Aupdated-desc+is%3Apr+is%3Amerged+author%3ARagibHasin"
+                        target="_blank"
+                        rel="noopener"
+                    >GitHub</a>
+                    {% endif %}
+                </li>
+                {%- if page.taxonomies and page.taxonomies.tags -%}
+                ,
+                <li class="tag">Tags:&nbsp;</li>
+                {%- for tag in page.taxonomies.tags -%}
+                    <li class="tag"><a class="p-category" href="{{ get_taxonomy_url(kind='tags', name=tag) | safe }}">{{ tag }}</a>
+                    {%- if not loop.last -%}
+                        ,&nbsp;
+                    {%- endif -%}
+                    </li>
+                {%- endfor -%}
+                {%- endif -%}
+            </ul>
+            
+            {{ full_page.content | safe }}
+        </article>
+        
+        {% if not loop.last %}
+        <hr>
+        <br>
+        {% endif %}
+        {% endfor %}
+    </main>
+{% endblock main_content %}
