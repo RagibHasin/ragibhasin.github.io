@@ -247,6 +247,7 @@ invert_title_order = false
 # social_media_card = ""
 
 menu = [
+  { name = "CV", url = "CV.pdf", trailing_slash = false },
   { name = "Blog", url = "blog", trailing_slash = true },
   # { name = "Archive", url = "archive", trailing_slash = true },
   { name = "Tags", url = "tags", trailing_slash = true },
