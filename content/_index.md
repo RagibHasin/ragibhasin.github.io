@@ -18,3 +18,7 @@ img_alt = "Caricature of Muhammad Ragib Hasin, courtesy ChatGPT"
 I'm Muhammad Ragib Hasin, a software developer by passion and electrical engineer by education from Bangladesh.
 
 I'm a Rust enthusiast, calligraphy and letter-art fan, and a fascinated student of (machine and human) languages.
+
+Oh, and I'm looking for a job. Thanks!
+
+[Email](mailto:ragib.hasin@gmail.com) | [GitHub](https://github.com/RagibHasin) | [LinkedIn](https://linkedin.com/in/ragib.hasin)
