@@ -1,6 +1,6 @@
 +++
 title = "linebender/xilem"
-date = "2026-04-14"
+date = 2026-05-16
 
 [taxonomies]
 tags = ["GUI", "foundational", "widgets", "reactive", "Rust"]
