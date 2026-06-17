@@ -128,7 +128,7 @@ show_date = true
 # "date" - Show only the original date of the post (default if unset).
 # "updated" - Show only the last updated date of the post. If there is no last updated date, it shows the original date.
 # "both" - Show both the original date and the last updated date.
-post_listing_date = "date"
+post_listing_date = "both"
 
 # Enable iine like buttons on all posts: https://iine.to/
 # Can be set at page or section levels, following the hierarchy: page > section > config. See: https://welpo.github.io/tabi/blog/mastering-tabi-settings/#settings-hierarchy
