@@ -1,12 +1,12 @@
 +++
-title = "endoli/understory"
+title = "forest-rs/understory"
 date = "2026-03-28"
 
 [taxonomies]
 tags = ["GUI", "foundational", "Rust"]
 
 [extra]
-gh_repo = "endoli/understory"
+gh_repo = "forest-rs/understory"
 +++
 
 Understory is a small family of crates designed to be combined in different stacks over time,
